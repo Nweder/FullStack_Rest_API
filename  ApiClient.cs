@@ -30,7 +30,7 @@ public class ApiClient
     }
     public async Task<DataBase?> CreateDataBaseAsync(DataBase input) //Post request ((Skapa!!))
     {
-        var json = JsonSerializer.Serialize(input, JsonOpts); // göt objektet till json
+        var json = JsonSerializer.Serialize(input, JsonOpts); // gör objektet till json
 
         using var content = new StringContent(json, Encoding.UTF8, "application/json");  // Lägg JSON i en HTTP body
 
@@ -73,11 +73,19 @@ public class ApiClient
         return null;
 
     }
-    
 
-    // public async Task<DataBase?> DeleteDataBaseAsync(int Id, int UserID, string Name, bool Completed, DataBase input) //Delete request ((ta bort!!))
-    // {
 
-    // }
+    public async Task<DataBase?> DeleteDataBaseAsync(int Id) //Delete request ((ta bort!!))
+    {
+        var req = new HttpRequestMessage(HttpMethod.Delete, $"todos/{Id}"); //skickar en DELETE-förfrågan till API:t för att ta bort en post med visst id
+        var res = await _http.SendAsync(req); //Skapa en HTTP-förfrågan med metod DELETE och URL:en todos/{id} (t.ex. todos/5).
+        res.EnsureSuccessStatusCode(); 
 
+        var body = await res.Content.ReadAsStringAsync(); // läs den som texten 
+        if (string.IsNullOrWhiteSpace(body)) //Om texten är tom → returnera null.
+        {
+            return null;
+        }
+        return JsonSerializer.Deserialize<DataBase>(body, JsonOpts); //gör om JSON till DataBase och returnera det.
+    }
 }
