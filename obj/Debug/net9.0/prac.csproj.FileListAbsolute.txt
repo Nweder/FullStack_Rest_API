@@ -1,0 +1,14 @@
+/Users/test/Desktop/prac/bin/Debug/net9.0/prac
+/Users/test/Desktop/prac/bin/Debug/net9.0/prac.deps.json
+/Users/test/Desktop/prac/bin/Debug/net9.0/prac.runtimeconfig.json
+/Users/test/Desktop/prac/bin/Debug/net9.0/prac.dll
+/Users/test/Desktop/prac/bin/Debug/net9.0/prac.pdb
+/Users/test/Desktop/prac/obj/Debug/net9.0/prac.GeneratedMSBuildEditorConfig.editorconfig
+/Users/test/Desktop/prac/obj/Debug/net9.0/prac.AssemblyInfoInputs.cache
+/Users/test/Desktop/prac/obj/Debug/net9.0/prac.AssemblyInfo.cs
+/Users/test/Desktop/prac/obj/Debug/net9.0/prac.csproj.CoreCompileInputs.cache
+/Users/test/Desktop/prac/obj/Debug/net9.0/prac.dll
+/Users/test/Desktop/prac/obj/Debug/net9.0/refint/prac.dll
+/Users/test/Desktop/prac/obj/Debug/net9.0/prac.pdb
+/Users/test/Desktop/prac/obj/Debug/net9.0/prac.genruntimeconfig.cache
+/Users/test/Desktop/prac/obj/Debug/net9.0/ref/prac.dll
