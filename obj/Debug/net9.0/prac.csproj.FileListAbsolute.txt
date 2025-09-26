@@ -12,3 +12,4 @@
 /Users/test/Desktop/prac/obj/Debug/net9.0/prac.pdb
 /Users/test/Desktop/prac/obj/Debug/net9.0/prac.genruntimeconfig.cache
 /Users/test/Desktop/prac/obj/Debug/net9.0/ref/prac.dll
+/Users/test/Desktop/prac/obj/Debug/net9.0/prac.sourcelink.json
