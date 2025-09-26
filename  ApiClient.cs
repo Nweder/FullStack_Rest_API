@@ -2,9 +2,15 @@ using System.Net.Http;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
+using System.Text.Json.Serialization;
 
-public record DataBase(int Id, int UserID, string Name, bool Completed);
-
+// public record DataBase(int Id, int UserID, string Name, bool Completed);
+public record DataBase(
+    int Id,
+    [property: JsonPropertyName("userId")] int UserID,
+    [property: JsonPropertyName("title")]  string Name,
+    [property: JsonPropertyName("completed")] bool Completed
+);
 public class ApiClient
 {
     private readonly HttpClient _http;  // skappar Dependency Injection: den skapas och inkapsling i klassen 
@@ -14,7 +20,7 @@ public class ApiClient
 
     public async Task<DataBase?> GetTodoAsync(int id) // Get reques ((läsa!!!))
     {
-        var res = await _http.GetAsync($"Todos/{id}");
+        var res = await _http.GetAsync($"todos/{id}");
 
         if (!res.IsSuccessStatusCode)
         {
@@ -34,7 +40,7 @@ public class ApiClient
 
         using var content = new StringContent(json, Encoding.UTF8, "application/json");  // Lägg JSON i en HTTP body
 
-        var res = await _http.PostAsync("Todos", content); // Skicka POST till API:t
+        var res = await _http.PostAsync("todos", content); // Skicka POST till API:t
 
         if (!res.IsSuccessStatusCode)
         {
@@ -58,7 +64,7 @@ public class ApiClient
 
         using var content = new StringContent(json, Encoding.UTF8, "application/json");  // Lägg JSON i en HTTP body
 
-        var res = await _http.PutAsync($"Todos/{Id}", content); // Skicka PUT till API:t + id 
+        var res = await _http.PutAsync($"todos/{Id}", content); // Skicka PUT till API:t + id 
 
         if (!res.IsSuccessStatusCode)
         {
