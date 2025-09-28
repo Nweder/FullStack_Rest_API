@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/test/Desktop/prac/prac.csproj",
+      "projectUniqueName": "/Users/test/Desktop/untitled folder 2/FullStack_Rest_API/prac.csproj",
       "projectName": "prac",
-      "projectPath": "/Users/test/Desktop/prac/prac.csproj",
+      "projectPath": "/Users/test/Desktop/untitled folder 2/FullStack_Rest_API/prac.csproj",
       "packagesPath": "/Users/test/.nuget/packages/",
-      "outputPath": "/Users/test/Desktop/prac/obj/",
+      "outputPath": "/Users/test/Desktop/untitled folder 2/FullStack_Rest_API/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/test/.nuget/NuGet/NuGet.Config"
