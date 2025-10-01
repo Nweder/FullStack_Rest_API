@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "tJpL1NVF+e0=",
+  "dgSpecHash": "GZn/C/YTRIo=",
   "success": true,
   "projectFilePath": "/Users/test/Desktop/untitled folder 2/FullStack_Rest_API/PersonApi/PersonApi.csproj",
   "expectedPackageFiles": [
     "/Users/test/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
+    "/Users/test/.nuget/packages/microsoft.aspnetcore.openapi/9.0.5/microsoft.aspnetcore.openapi.9.0.5.nupkg.sha512",
     "/Users/test/.nuget/packages/microsoft.bcl.asyncinterfaces/7.0.0/microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512",
     "/Users/test/.nuget/packages/microsoft.build.framework/17.8.3/microsoft.build.framework.17.8.3.nupkg.sha512",
     "/Users/test/.nuget/packages/microsoft.build.locator/1.7.8/microsoft.build.locator.1.7.8.nupkg.sha512",

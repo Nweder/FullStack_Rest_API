@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v9.0": {
       "PersonApi/1.0.0": {
         "dependencies": {
+          "Microsoft.AspNetCore.OpenApi": "9.0.5",
           "Microsoft.EntityFrameworkCore.Sqlite": "9.0.9",
           "Microsoft.EntityFrameworkCore.Tools": "9.0.9",
           "Swashbuckle.AspNetCore": "9.0.4"
@@ -21,6 +22,17 @@
           "lib/net6.0/Humanizer.dll": {
             "assemblyVersion": "2.14.0.0",
             "fileVersion": "2.14.1.48190"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.OpenApi/9.0.5": {
+        "dependencies": {
+          "Microsoft.OpenApi": "1.6.25"
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.AspNetCore.OpenApi.dll": {
+            "assemblyVersion": "9.0.5.0",
+            "fileVersion": "9.0.525.22904"
           }
         }
       },
@@ -835,6 +847,13 @@
       "sha512": "sha512-lQKvtaTDOXnoVJ20ibTuSIOf2i0uO0MPbDhd1jm238I+U/2ZnRENj0cktKZhtchBMtCUSRQ5v4xBCUbKNmyVMw==",
       "path": "humanizer.core/2.14.1",
       "hashPath": "humanizer.core.2.14.1.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.OpenApi/9.0.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yZLOciYlpaOO/mHPOpgeSZTv8Lc7fOOVX40eWJJoGs/S9Ny9CymDuKKQofGE9stXGGM9EEnnuPeq0fhR8kdFfg==",
+      "path": "microsoft.aspnetcore.openapi/9.0.5",
+      "hashPath": "microsoft.aspnetcore.openapi.9.0.5.nupkg.sha512"
     },
     "Microsoft.Bcl.AsyncInterfaces/7.0.0": {
       "type": "package",

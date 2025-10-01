@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="sv">
+<meta charset="utf-8" />
+<title>PersonApi snabbtest</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<style>
+  body{font-family:system-ui,Arial,sans-serif;max-width:720px;margin:40px auto;padding:0 16px}
+  fieldset{margin:16px 0;padding:12px}
+  label{display:block;margin:8px 0 4px}
+  input[type=text],input[type=number]{width:100%;padding:8px}
+  button{padding:8px 12px;cursor:pointer}
+  pre{background:#f4f4f4;padding:12px;white-space:pre-wrap}
+</style>
+
+<h1>Testa PersonApi</h1>
+
+<fieldset>
+  <legend>Skapa person (POST /api/person)</legend>
+  <label for="name">Namn</label>
+  <input id="name" type="text" placeholder="t.ex. Alice" />
+  <label><input id="exists" type="checkbox" /> Exists</label>
+  <button id="createBtn">Skapa</button>
+</fieldset>
+
+<fieldset>
+  <legend>Hämta person (GET /api/person/{id})</legend>
+  <label for="pidGet">Id</label>
+  <input id="pidGet" type="number" min="1" placeholder="t.ex. 1" />
+  <button id="getBtn">Hämta</button>
+</fieldset>
+
+<fieldset>
+  <legend>Radera person (DELETE /api/person/{id})</legend>
+  <label for="pidDel">Id</label>
+  <input id="pidDel" type="number" min="1" placeholder="t.ex. 1" />
+  <button id="removeBtn">Radera</button>
+</fieldset>
+
+<h2>Resultat</h2>
+<pre id="out">–</pre>
+
+<script>
+  const BASE_URL = "/api/person";
+  const out = document.getElementById("out");
+  const show = v => out.textContent = typeof v === "string" ? v : JSON.stringify(v, null, 2);
+
+  createBtn.onclick = async () => {
+    const name = nameInput().trim();
+    const exists = document.getElementById("exists").checked;
+    if (name.length < 2) return show("Namn för kort.");
+    try {
+      const r = await fetch(BASE_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, exists })
+      });
+      if (!r.ok) return show(`Fel ${r.status}: ${await r.text()}`);
+      const data = await r.json();
+      show(data);
+      // pidGet.value = data.id;   // bekvämlighet
+      pidDel.value = data.id;
+    } catch (e) { show(`Nätverksfel: ${e}`); }
+  };
+
+  getBtn.onclick = async () => {
+    const id = pidGet.value;
+    if (!id) return show("Ange Id.");
+    try {
+      const r = await fetch(`${BASE_URL}/${encodeURIComponent(id)}`);
+      if (!r.ok) return show(`Fel ${r.status}: ${await r.text()}`);
+      const data = await r.json();
+      show(data);
+      pidDel.value = data.id;   // spegla till delete
+    } catch (e) { show(`Nätverksfel: ${e}`); }
+  };
+
+  removeBtn.onclick = async () => {
+    const id = pidDel.value;
+    if (!id) return show("Ange Id.");
+    try {
+      const r = await fetch(`${BASE_URL}/${encodeURIComponent(id)}`, { method: "DELETE" });
+      if (r.status === 204) return show(`Id ${id} raderad.`);
+      show(`Fel ${r.status}: ${await r.text()}`);
+    } catch (e) { show(`Nätverksfel: ${e}`); }
+  };
+
+  function nameInput(){ return document.getElementById("name").value; }
+</script>
+</html>

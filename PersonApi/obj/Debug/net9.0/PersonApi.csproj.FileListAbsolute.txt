@@ -151,3 +151,6 @@
 /Users/test/Desktop/untitled folder 2/FullStack_Rest_API/PersonApi/bin/Debug/net9.0/runtimes/win-arm64/native/e_sqlite3.dll
 /Users/test/Desktop/untitled folder 2/FullStack_Rest_API/PersonApi/bin/Debug/net9.0/runtimes/win-x64/native/e_sqlite3.dll
 /Users/test/Desktop/untitled folder 2/FullStack_Rest_API/PersonApi/bin/Debug/net9.0/runtimes/win-x86/native/e_sqlite3.dll
+/Users/test/Desktop/untitled folder 2/FullStack_Rest_API/PersonApi/bin/Debug/net9.0/Microsoft.AspNetCore.OpenApi.dll
+/Users/test/Desktop/untitled folder 2/FullStack_Rest_API/PersonApi/bin/Debug/net9.0/PersonApi.staticwebassets.runtime.json
+/Users/test/Desktop/untitled folder 2/FullStack_Rest_API/PersonApi/obj/Debug/net9.0/compressed/w14t498cyw-41ujqzpe1j.gz
