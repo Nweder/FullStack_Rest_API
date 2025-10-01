@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/test/Desktop/untitled folder 2/FullStack_Rest_API/PersonApi/PersonApi.csproj": {}
+    "/Users/test/FullStack_Rest_API/PersonApi/PersonApi.csproj": {}
   },
   "projects": {
-    "/Users/test/Desktop/untitled folder 2/FullStack_Rest_API/PersonApi/PersonApi.csproj": {
+    "/Users/test/FullStack_Rest_API/PersonApi/PersonApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/test/Desktop/untitled folder 2/FullStack_Rest_API/PersonApi/PersonApi.csproj",
+        "projectUniqueName": "/Users/test/FullStack_Rest_API/PersonApi/PersonApi.csproj",
         "projectName": "PersonApi",
-        "projectPath": "/Users/test/Desktop/untitled folder 2/FullStack_Rest_API/PersonApi/PersonApi.csproj",
+        "projectPath": "/Users/test/FullStack_Rest_API/PersonApi/PersonApi.csproj",
         "packagesPath": "/Users/test/.nuget/packages/",
-        "outputPath": "/Users/test/Desktop/untitled folder 2/FullStack_Rest_API/PersonApi/obj/",
+        "outputPath": "/Users/test/FullStack_Rest_API/PersonApi/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/test/.nuget/NuGet/NuGet.Config"
